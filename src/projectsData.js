@@ -1,7 +1,7 @@
 let projects = {
     survey: {
         link: "https://github.com/z12zt0/React-and-html-things/tree/master/Survey%20form",
-        img: ["C:/Users/z12zt/Desktop/react-page/react-page/src/pics/survey_pic.PNG", "FCC's survey"], 
+        img: ["./pics/survey_pic.PNG", "FCC's survey"], 
         caption: "Simple survey form"
     },
     product: {
