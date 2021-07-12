@@ -1,0 +1,465 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Recursive', sans-serif;
+}
+
+.light {
+  --back-switch: rgb(182, 182, 182);
+  --x: 0;
+  --switch-checked: rgb(255, 255, 255);
+  --text-color: black;
+
+  --nav-color: rgb(212, 212, 212);
+  --welcome-color: linear-gradient(60deg, rgb(255, 255, 255), rgb(219, 219, 219));
+  --project-color: rgb(114, 114, 128);
+  --figcaption-color: rgb(95, 85, 69);
+  --contacts-color: linear-gradient(60deg, rgba(255, 247, 247, 0.932), rgb(219, 219, 219));
+  --underline-color: rgb(51, 51, 51);
+}
+
+.dark {
+  --text-color: white;
+  --nav-color: rgb(20, 20, 20);
+  --welcome-color: linear-gradient(60deg, rgba(1, 1, 1, 0.925), rgb(14, 14, 14));
+  --project-color: rgb(36, 36, 36);
+  --contacts-color: rgb(22, 22, 24);
+  --underline-color: rgb(202, 202, 202);
+}
+
+.responsive-div {
+  transition: background .5s ease-out;
+}
+
+.responsive-text {
+  color: var(--text-color);
+  transition: color .8s ease-in;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* switch */
+
+#switch {
+  appearance: none;
+  -moz-appearance: none;
+
+  position: relative;
+
+  height: 20px;
+  width: 40px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  outline: none;
+
+  margin-left: 30px;
+
+  background: var(--switch-checked);
+  
+  cursor: pointer;
+}
+
+#switch::after {
+  content: '';
+
+  position: absolute;
+
+  left: 2px;
+  top: 1px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--back-switch);
+  transition: 0.4s ease;
+  transform: translateX(var(--x,0));
+}
+
+#switch:checked {
+  --back-switch: rgb(71, 71, 71);
+  --x: 18px;
+  --switch-checked: rgba(95, 106, 212, 0.74);
+}
+
+#switch:focus {
+  box-shadow: 0 0 2px 1px rgb(0, 183, 255);
+}
+
+#switch:hover {
+  border: 1px solid blue;
+}
+
+#switch + label {
+  position: relative;
+
+  color: var(--text-color);
+  top: -6px;
+  text-align: start;
+  padding: 0 10px 0 3px;
+
+  cursor: pointer;
+}
+
+/* navbar */
+
+#navbar {
+ height: 10vh;
+ width: 100%;
+ 
+ position: fixed;
+
+ top: 0px;
+ left: 0px;
+
+ display: flex;
+
+ align-items: center;
+ justify-content: flex-end;
+
+ background: var(--nav-color);
+
+ font-size: 17px;
+
+ z-index: 2;
+}
+
+#nav-items ul {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+}
+
+#nav-items ul li a{
+  position: relative;
+
+  padding: 0 10px;
+}
+
+#nav-items ul li a::before {
+  content: "";
+  position: absolute;
+
+  left: 10%;
+  bottom: -4px;
+  
+  background: var(--underline-color);
+
+  width: 0;
+  height: 2px;
+
+  z-index: 2;
+  opacity: 0;
+
+  transition: 0.5s;
+}
+
+#nav-items ul li a:hover::before {
+  width: 80%;
+  opacity: 0.8;
+}
+
+/* Welcome section */
+
+#about {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--welcome-color);
+}
+
+#welcome-text {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+#about div h1, #projects h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#about div p {
+  font-size: 20px;
+}
+
+/* Projects page */
+
+#projects {
+  padding: 20vh 15px;
+
+  min-height: 60vh;
+
+  background: var(--project-color);
+}
+
+#projects h2 {
+  text-align: center;
+}
+
+#projects #grid-handler{
+  display: grid;
+
+  width: 100%;
+  margin-top: 20vh;
+
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: auto;
+  gap: 12px;
+}
+
+figcaption {
+  text-align: center;
+  padding: 10px;
+  background: var(--contacts-color);
+}
+
+figure {
+  filter: brightness(0.8);
+  transition: .5s;
+}
+
+figure:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* contacts */
+
+#contacts {
+  min-height: 80vh;
+  width: 100%;
+  background: var(--contacts-color);
+}
+
+#contacts h2 {
+  margin: 0;
+  padding-top: 20vh;
+
+  font-size: 30px;
+
+  text-align: center;
+}
+
+#contacts-wrapper {
+  margin-left: 15%;
+  width: 70%;
+}
+
+#grid_holder {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 50px;
+
+  margin: 50px 20px 0px;
+}
+
+.contacts-info {
+  font-size: 1.7rem;
+  transition: 0.5s;
+}
+
+.contacts-info a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-style: italic;
+  padding: 15px;
+}
+
+.contacts-info span {
+  margin: 10px;
+}
+
+.contacts-info:hover {
+  font-size: 1.75rem;
+}
+
+path {
+  transition: 0.5s;
+}
+
+/* maybe should use JS for automatic color apply on the new icons */
+.contacts-info:nth-of-type(1):hover path {
+  fill:rgb(46, 69, 199);
+} 
+.contacts-info:nth-of-type(2):hover path {
+  fill:rgb(183, 214, 4);
+}
+.contacts-info:nth-of-type(3):hover path {
+  fill:rgb(71, 148, 75);
+}
+.contacts-info:nth-of-type(4):hover path {
+  fill:rgb(255, 102, 0);
+}   
+
+
+
+/* footer */
+
+footer {
+  padding: 10px;
+  text-align: center;
+  background: var(--nav-color);
+}
+
+footer p {
+  position: relative;
+  padding: 10px;
+}
+
+footer p::after {
+  content: "Congratulations! By scrolling all the way down here, you have officially completed this website.";
+
+  display: none;
+  position: absolute;
+
+  color: var(--text-color);
+
+  max-width: 50vw;
+
+  top: -110px;
+  left: 50%;
+  margin-left: -25%;
+}
+
+footer p:hover::after {
+  display: block;
+}
+
+@media (max-width: 515px) {
+  #projects {
+      padding: 20vh 0px;
+  }
+
+  /* contacts */
+  #contacts-wrapper {
+      display: block;
+  }
+
+  #contacts-sources {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-template-rows: auto;
+      gap: 10px;
+
+      place-items: center;
+  }
+
+  /* contacts: icons and text */
+
+  #contacts-sources li a {
+      padding: 15px 0;
+  }
+
+  #contacts-sources li:first-child a span {
+      margin-left: 5px;
+  }
+
+  #contacts-sources li:nth-child(3) a {
+      margin-left: 15px;
+  }
+
+  #contacts-sources li:nth-child(4) a {
+      margin-left: 19px;
+  }
+
+  #contacts-sources li:nth-child(5) a {
+      margin-left: 10px;
+  }
+
+  #contacts-sources li:last-child a span {
+      margin-left: 3px;
+  }
+  
+  /* footer */
+
+  footer p {
+      border: 2px solid black;
+      border-radius: 3px;
+
+      padding: 10px;
+  }
+
+  footer p::after {
+      position: absolute;
+
+      min-width: 80vw;
+      margin-left: -45%;
+  }
+  
+  /* navbar */
+
+
+}
+
+@media (max-width: 465px) {
+  #navbar {
+      height: 15vh;
+      min-height: 80px;
+
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  #switch {
+      margin-left: 5px;
+  }
+}
+
+@media (max-width: 335px) {
+  footer p {
+      border: none;
+  }
+
+  footer p:hover::after {
+      display: none;
+  }
+}
+
+/* TODO:
+1) big image in welcome page beneath the text - NOPE
+2) keyframes -> hue-rotate on this image - NOPE
+3) fix colors (i think red - white / red - darkblue) - yep
+4) images for projects and check how it works - //
+5) hover for images - scale and 01, 02 etc - //
+6) footer - like in fcc - a line
+7) theme switcher - rewrite CSS (body.light && body.dark) - yep
+-------
+TODO:
+1) fix navbar for media (less than 440px)
+2) fix projects (too witdh for media)
+3) contacts are working too strange - too much padding
+4) 700px - contacts - center them
+5) 500px - contacts - too big padding
+6) 470px - navbar - switcher is too big
+7) 430px - projects - imgs are too big
+8) 340px - easten egg is not correct
+9) 320px - contacts - they are in the footer
+исправить до 320px
+
+1) minmax - make min bigger for fullscreen and in media 
+  lesser for phones
+2) add span for things in contacts and magrin them
+3) nav is not fixed still 
+*/
