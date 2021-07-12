@@ -1,10 +1,14 @@
-function Navbar({ data, switchFunc }) {
+import { Link } from "react-router-dom";
+
+function Navbar({ data, switchFunc, handleReroute=f=>f }) {
     return (
     <nav className="responsive-div" id="navbar">
         <div id="nav-items">
             <ul>
-                {data.map(cur => <li>
-                  <a href={`#${cur.toLowerCase()}`} className="responsive-text">{cur}</a>
+                {data.map(cur =>
+                <li>
+                  {/* {<a href={`/#${cur.toLowerCase()}`} className="responsive-text">{cur}</a>} */}
+                  <Link to={`/#${cur.toLowerCase()}`} className="responsive-text" onClick={() => handleReroute(cur)}>{cur}</Link>
                 </li>)}
             </ul>
         </div>

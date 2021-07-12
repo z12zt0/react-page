@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* body {
+    background: rgb(214, 214, 214);
+    font-family: 'Roboto', sans-serif;
+} */
+
+#root__header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#root__app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(30vh, 80vh);
+    gap: 0 20px;
+    height: 100%;
+}
+
+#root__app_editor textarea {
+    height: 70vh;
+    width: 100%;
+    resize: none;
+    overflow: auto;
+}
+
+#preview {
+    border: 2px solid black;
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+}

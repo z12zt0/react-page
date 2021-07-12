@@ -1,0 +1,128 @@
+/* :root {
+  background-color: rgb(37, 37, 37);
+} */
+
+/* span {
+margin: 0;
+padding: 0;
+} */
+
+/* #root {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 95vh;
+  width: 99vw;
+} */
+
+#app-holder {
+  display: grid;
+
+  width: 100%;
+  height: 100%;
+
+  grid-template-columns: 1.5fr 2fr 1.5fr;
+  gap: 10px;
+
+  justify-items: center;
+  align-items: center;
+}
+
+
+.time-block {
+  display: flex;
+
+  flex-wrap: nowrap;
+  flex-direction: column;
+  font-size: 25px;
+
+  height: 35%;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  opacity: 1;
+
+  transition: all 400ms ease-in;
+
+  background-color: rgb(221, 221, 221);
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 27px;
+}
+
+.time-block#main-timer {
+  font-size: 35px;
+  height: 55%;
+}
+
+/* #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 7vh;
+
+  background-color: rgb(26, 27, 32);
+  color: white;
+
+  text-align: center;
+}
+
+#navbar p {
+  margin-top: 1vh;
+
+  font-size: 25px;
+} */
+
+/* button {
+  margin: 15px;
+  padding: 10px;
+  font-size: 15px;
+
+  background-color: rgb(160, 160, 160);
+  color: rgb(0, 0, 0);
+
+  transition: all 300ms ease-out;
+
+  outline-style: none;
+} */
+
+/* button:not(.big-button) {
+  border-radius: 10px;
+  color: black;
+  font-weight: 450;
+}
+
+button:hover {
+  cursor: pointer;
+
+  background-color: rgb(26, 27, 32);
+  color: rgb(221, 221, 221);
+}
+
+button:focus {
+  background-color: rgb(87, 168, 87);
+} */
+
+.big-button {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.disabled {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  top: 35%;
+}
+
+.enabled {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  top: 0%;
+}

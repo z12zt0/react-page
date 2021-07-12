@@ -4,6 +4,11 @@ import Navbar from './components/Navbar.js';
 import AboutSection from './AboutSection.js';
 import ProjectsSection from './components/ProjectsSection.js';
 import ContactSection from './components/ContactSection';
+import { Switch, Route } from 'react-router-dom';
+
+import MainCalc from "./projects/calc/App.js";
+import Clock from "./projects/clock/App.js";
+import Markdown from "./projects/markdown/App.js";
 
 
 function App() {
@@ -24,16 +29,43 @@ function App() {
       label.innerText = "Light theme";
     }
   };
+  function handleReroute(url) {
+    setTimeout(() => {
+      window.location.href = `/#${url.toLowerCase()}`;
+    }, 0);
+    return null;
+  };
+  // will use dynamic names for components later, for now this should work
+  // bug - footer is fucked in the apps
+  // 2 - change all the css files -> they are messing with each other
+  // 3 - delete or move navbar in the pomodoro clock
+  // 4 - READ BEM (and thank you for trying to use it in markdown.js)
 
   let navArray = ["About", "Projects", "Contacts"];
 
   return (
   <div id="bodyDiv" className="light">
-    <Navbar data={navArray} switchFunc={switchFunc}/>
+    <Navbar data={navArray} switchFunc={switchFunc} handleReroute={handleReroute}/>
     <main>
-        <AboutSection />
-        <ProjectsSection data={projectsData}/>
-        <ContactSection />
+        <Switch>
+          <Route path={"/calc"}>
+            <MainCalc />
+          </Route>
+          <Route path={"/clock"}>
+            <Clock />
+          </Route>
+          <Route path={"/markdown"}>
+            <Markdown />
+          </Route>
+          <Route path={"/product"}>
+            <iframe sandbox src="./projects/product/index.html" width="100%" height="900px" title="product-sub"></iframe>
+          </Route>
+          <Route path="/">
+            <AboutSection />
+            <ProjectsSection data={projectsData}/>
+            <ContactSection />
+          </Route>
+        </Switch>
 
         <footer className="responsive-div">
             <p className="responsive-text">2020 - {new Date().getFullYear()}</p>
