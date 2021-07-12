@@ -207,13 +207,13 @@ a {
   text-align: center;
 }
 
-#projects #grid-handler{
+#mainDiv__projects-grid {
   display: grid;
 
   width: 100%;
   margin-top: 20vh;
 
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   grid-template-rows: auto;
   gap: 12px;
 }
