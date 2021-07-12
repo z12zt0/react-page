@@ -9,6 +9,8 @@ import { Switch, Route } from 'react-router-dom';
 import MainCalc from "./projects/calc/App.js";
 import Clock from "./projects/clock/App.js";
 import Markdown from "./projects/markdown/App.js";
+import QuoteApp from "./projects/rqm/index.js";
+import Drum from "./projects/drum/App.js";
 
 
 function App() {
@@ -57,8 +59,11 @@ function App() {
           <Route path={"/markdown"}>
             <Markdown />
           </Route>
-          <Route path={"/product"}>
-            <iframe sandbox src="./projects/product/index.html" width="100%" height="900px" title="product-sub"></iframe>
+          <Route path={"/random-quote-machine"}>
+            <QuoteApp />
+          </Route>
+          <Route path={"/drum"}>
+            <Drum />
           </Route>
           <Route path="/">
             <AboutSection />
