@@ -1,33 +1,17 @@
-/* :root {
-  background-color: rgb(37, 37, 37);
-} */
 
-/* span {
-margin: 0;
-padding: 0;
-} */
-
-/* #root {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  height: 95vh;
-  width: 99vw;
-} */
-
-#app-holder {
+#clock-holder {
   display: grid;
 
   width: 100%;
-  height: 100%;
+  height: 95vh;
 
   grid-template-columns: 1.5fr 2fr 1.5fr;
   gap: 10px;
 
   justify-items: center;
   align-items: center;
+
+  background-color: rgb(37, 37, 37);
 }
 
 
@@ -58,7 +42,7 @@ padding: 0;
   height: 55%;
 }
 
-/* #navbar {
+#clock-holder__navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -72,13 +56,13 @@ padding: 0;
   text-align: center;
 }
 
-#navbar p {
+#clock-holder__navbar p {
   margin-top: 1vh;
 
   font-size: 25px;
-} */
+}
 
-/* button {
+#clock-holder button {
   margin: 15px;
   padding: 10px;
   font-size: 15px;
@@ -89,24 +73,24 @@ padding: 0;
   transition: all 300ms ease-out;
 
   outline-style: none;
-} */
+}
 
-/* button:not(.big-button) {
+#clock-holder button:not(.big-button) {
   border-radius: 10px;
   color: black;
   font-weight: 450;
 }
 
-button:hover {
+#clock-holder button:hover {
   cursor: pointer;
 
   background-color: rgb(26, 27, 32);
   color: rgb(221, 221, 221);
 }
 
-button:focus {
+#clock-holder button:focus {
   background-color: rgb(87, 168, 87);
-} */
+}
 
 .big-button {
   padding: 20px;

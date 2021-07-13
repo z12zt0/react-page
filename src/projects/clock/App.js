@@ -96,8 +96,8 @@ function Clock() {
  
   console.log("In App:", initialTime.session, initialTime.break);
   return (
-    <div id="app-holder">
-      <nav id="navbar">
+    <div id="clock-holder">
+      <nav id="clock-holder__navbar">
         <p>Pomodoro Clock</p>
       </nav>
       <SessionSet setMinutes={setMinutes} initialSession={initialTime.session}/>

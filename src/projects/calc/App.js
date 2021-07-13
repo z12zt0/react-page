@@ -94,8 +94,10 @@ function MainCalc() {
    }
 
   return (
-      <div id="calc">
+      <div id="calc-wrapper">
+        <div id="calc">
           <Calc buttonClick={button => handleButton(button)} current={calculated} data={data}/>
+        </div>
       </div>
   )
 };

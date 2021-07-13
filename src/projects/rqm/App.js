@@ -64,7 +64,7 @@ const backgrounds = [
                               handleClick={() => {
                                   setLoading(true);
                                  
-                                  const body = document.body;
+                                  const body = document.getElementById('quote-root');
                                   const index = Math.floor(Math.random()* backgrounds.length);
                                   
                                   body.animate(
@@ -83,7 +83,7 @@ const backgrounds = [
               />
               <ShareDiv {...data}/>
           </div>
-          <p id="additional-text">Created using the PaperQuotes API - check it <a id="additional-text__link" href="http://paperquotes.com/">here</a></p>
+          <p id="additional-text">Created using the PaperQuotes API - check it <a href="http://paperquotes.com/">here</a></p>
       </div>
   );
 };

@@ -5,8 +5,6 @@ import data from "./data.js";
 
 function Drum() {
 
-    // let dataF = data;
-
     function eventHandler(target) {
         target.parentNode.classList.add("active"); // current audio -> parent (div) -> className = active
         target.play(); // audio.play()

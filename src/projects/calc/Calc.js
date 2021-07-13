@@ -13,9 +13,9 @@ function Calc({ buttonClick=f=>f, current, data}) {
 
     return (
         <>
-            <div className="button display" id="display">{current}</div>
+            <div className="calc__button calc__display" id="display">{current}</div>
             {symbolsArray.map((cur, i) => 
-                <div key={i} className="button"
+                <div key={i} className="calc__button"
                   onClick={(num) => handleClick(num)}
                   id={data["ids"][cur]}>
                                 {cur}

@@ -3,13 +3,15 @@
   background: linear-gradient(60deg, green, blue) ;
 } */
 
-/* #root {
+#calc-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; 
+  height: 100vh; 
+
+  background: linear-gradient(60deg, green, blue) ;
   /* don't know why, but it works like that */
-/* /* }  */
+} 
 
 #calc {
   display: grid;
@@ -20,7 +22,7 @@
 
 /* Button and result */
 
-/* .button {
+.calc__button {
   height: 70px;
   width: 70px;
 
@@ -35,18 +37,18 @@
   font-size: 35px;
 }
 
-.button:hover {
+.calc__button:hover {
   filter: brightness(0.8);
-} */
+}
 
-.button#equals {
+.calc__button#equals {
 width: 280px;
 }
 
 #display {
   grid-area: 1/1/2/5;
   width: 100%;
-  height: 75px;
+  height: 90px;
   font-size: 40px;
   overflow: auto;
 }

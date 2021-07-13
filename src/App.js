@@ -33,7 +33,7 @@ function App() {
   };
   function handleReroute(url) {
     setTimeout(() => {
-      window.location.href = `/#${url.toLowerCase()}`;
+      window.location.href = `/#bodyDiv__${url.toLowerCase()}`;
     }, 0);
     return null;
   };
