@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "z12zt0",
+  "homepage": "https://z12zt0.github.io/react-page/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
