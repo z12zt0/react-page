@@ -5,8 +5,7 @@ function Project() {
 
     return (
         <div>
-            <h1>{match.url}</h1>
-            
+            <h1>{match.url}</h1>            
         </div>
     )
 }

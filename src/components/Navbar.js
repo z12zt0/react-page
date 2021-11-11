@@ -7,7 +7,6 @@ function Navbar({ data, switchFunc, handleReroute=f=>f }) {
             <ul>
                 {data.map(cur =>
                 <li>
-                  {/* {<a href={`/#${cur.toLowerCase()}`} className="responsive-text">{cur}</a>} */}
                   <Link to={`/#bodyDiv__${cur.toLowerCase()}`} className="responsive-text" onClick={() => handleReroute(cur)}>{cur}</Link>
                 </li>)}
             </ul>

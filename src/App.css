@@ -436,30 +436,3 @@ footer.responsive-div p:hover::after {
       display: none;
   }
 }
-
-/* TODO:
-1) big image in welcome page beneath the text - NOPE
-2) keyframes -> hue-rotate on this image - NOPE
-3) fix colors (i think red - white / red - darkblue) - yep
-4) images for projects and check how it works - //
-5) hover for images - scale and 01, 02 etc - //
-6) footer - like in fcc - a line
-7) theme switcher - rewrite CSS (body.light && body.dark) - yep
--------
-TODO:
-1) fix navbar for media (less than 440px)
-2) fix projects (too witdh for media)
-3) contacts are working too strange - too much padding
-4) 700px - contacts - center them
-5) 500px - contacts - too big padding
-6) 470px - navbar - switcher is too big
-7) 430px - projects - imgs are too big
-8) 340px - easten egg is not correct
-9) 320px - contacts - they are in the footer
-исправить до 320px
-
-1) minmax - make min bigger for fullscreen and in media 
-  lesser for phones
-2) add span for things in contacts and magrin them
-3) nav is not fixed still 
-*/

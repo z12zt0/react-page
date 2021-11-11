@@ -1,22 +1,4 @@
 let projects = {
-    // survey: {
-    //     link: "https://github.com/z12zt0/React-and-html-things/tree/master/Survey%20form",
-    //     img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/survey_pic.PNG", "FCC's survey"], 
-    //     caption: "Simple survey form",
-    //     myLink: "survey"
-    // },
-    // product: {
-    //     link: "https://github.com/z12zt0/React-and-html-things/tree/master/Product%20landing%20form",
-    //     img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/buyPls_pic.PNG", "FCC's product page"], 
-    //     caption: "Some product landing page",
-    //     myLink: "product"
-    // },
-    // technicalPage: {
-    //     link: "https://github.com/z12zt0/React-and-html-things/tree/master/Technical%20page",
-    //     img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/tech_pic.PNG", "FCC's technical page"], 
-    //     caption: "Technical page",
-    //     myLink: "tech"
-    // },
     rqm: {
         link: "https://codepen.io/z12zt0/full/zYozzWm",
         img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/rqm_pic.PNG", "FCC's random quote machine"], 
@@ -46,6 +28,12 @@ let projects = {
         img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/clock_pic.PNG", "FCC's pomodoro clock (25 + 5)"],
         caption: "Pomodoro clock (25 + 5)",
         myLink: "clock"
+    },
+    weatherApp: {
+        link: "https://github.com/z12zt0/weather",
+        img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/weatherApp-img.PNG", "Weather app"],
+        caption: "Simple weather app",
+        myLink: "weather-app"
     }
 };
 
