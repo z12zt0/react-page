@@ -31,7 +31,7 @@ let projects = {
     },
     weatherApp: {
         link: "https://github.com/z12zt0/weather",
-        img: ["https://raw.githubusercontent.com/z12zt0/react-page/main/src/pics/weatherApp-img.PNG", "Weather app"],
+        img: ["https://raw.githubusercontent.com/z12zt0/react-page/router/src/pics/weatherApp-img.PNG", "Weather app"],
         caption: "Simple weather app",
         myLink: "weather-app"
     }
