@@ -83,3 +83,9 @@ div#quote-box {
     color: inherit;
     text-decoration: underline;
 }
+
+@media (max-width: 500px) {
+    div#quote-box {
+        width: 90vw;
+    }
+}

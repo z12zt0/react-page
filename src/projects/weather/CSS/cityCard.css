@@ -64,3 +64,16 @@
 #warning-button {
     margin: auto;
 }
+
+@media (max-width: 500px) {
+    #mainCard {
+        min-width: 95vw;
+    }
+    #mainCard__percipitation > img {
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    #mainCard__addInfo div:last-child {
+        margin-left: 5px;
+    }
+}

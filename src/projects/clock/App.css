@@ -110,3 +110,38 @@
   visibility: visible;
   top: 0%;
 }
+
+@media (max-width: 600px) {
+  #clock-holder {
+    margin-top: 10vh;
+  
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .time-block {
+    flex-direction: row;
+    font-size: 25px;
+  
+    height: 20vh;
+    width: 100%;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  .time-block:not(#main-timer) p {
+    margin-right: 10px;
+  }
+
+  #main-timer span {
+    font-size: 30px;
+    margin-right: -5px;
+  }
+  #time-left {
+    position: relative;
+    right: 5px;
+  }
+  #clock-holder #main-timer button {
+    margin: 0px;
+  }
+}

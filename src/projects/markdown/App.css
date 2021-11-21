@@ -32,3 +32,12 @@
     background-color: rgb(255, 255, 255);
     overflow: auto;
 }
+
+@media (max-width: 465px) {
+    #root__header {
+        padding-top: 5vh;
+    }
+    #root__app {
+        grid-template-columns: 1fr;
+    }
+}

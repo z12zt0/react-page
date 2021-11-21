@@ -33,6 +33,7 @@ body {
 
 .responsive-div {
   transition: background .5s ease-out;
+  width: 100%;
 }
 
 .responsive-text {
@@ -100,7 +101,7 @@ a {
   color: var(--text-color);
   top: -6px;
   text-align: start;
-  padding: 0 10px 0 3px;
+  padding: 0 20px 0 3px;
 
   cursor: pointer;
 }
@@ -109,7 +110,6 @@ a {
 
 #bodyDiv__navbar {
  height: 10vh;
- width: 100%;
  
  position: fixed;
 
@@ -167,7 +167,6 @@ a {
 /* Welcome section */
 
 #bodyDiv__about {
-  width: 100%;
   height: 100vh;
 
   display: flex;
@@ -196,7 +195,7 @@ a {
 /* Projects page */
 
 #bodyDiv__projects {
-  padding: 20vh 15px;
+  padding-top: 20vh;
 
   min-height: 60vh;
 
@@ -210,10 +209,9 @@ a {
 #bodyDiv__projects__projects-grid {
   display: grid;
 
-  width: 100%;
   margin-top: 20vh;
 
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, 1fr);
   grid-template-rows: auto;
   gap: 12px;
 }
@@ -244,7 +242,6 @@ img.project-tile__img {
 
 #bodyDiv__contacts {
   min-height: 80vh;
-  width: 100%;
   background: var(--contacts-color);
 }
 
@@ -258,14 +255,18 @@ img.project-tile__img {
 }
 
 #bodyDiv__contacts__contacts-wrapper {
-  margin-left: 15%;
-  width: 70%;
+  margin: auto;
+  width: 70vw;
+
+  padding-bottom: 5vh;
 }
 
 #contacts-wrapper__grid_holder {
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+
   justify-items: center;
   align-items: center;
   gap: 50px;
@@ -286,7 +287,7 @@ img.project-tile__img {
 }
 
 .contacts-info span {
-  margin: 10px;
+  margin: 10px 10px 10px 0;
 }
 
 .contacts-info:hover {
@@ -297,7 +298,7 @@ path {
   transition: 0.5s;
 }
 
-/* maybe should use JS for automatic color apply on the new icons */
+
 .contacts-info:nth-of-type(1):hover path {
   fill:rgb(46, 69, 199);
 } 
@@ -312,17 +313,15 @@ path {
 }   
 
 
-
 /* footer */
 
 footer.responsive-div {
-  padding: 10px;
+  padding: 5px 0;
   text-align: center;
   background: var(--nav-color);
 }
 
 footer.responsive-div p {
-  position: relative;
   padding: 10px;
 }
 
@@ -330,15 +329,13 @@ footer.responsive-div p::after {
   content: "Congratulations! By scrolling all the way down here, you have officially completed this website.";
 
   display: none;
-  position: absolute;
 
   color: var(--text-color);
+  background: var(--nav-color);
 
-  max-width: 50vw;
-
-  top: -110px;
-  left: 50%;
-  margin-left: -25%;
+  width: 50vw;
+  margin: auto;
+  padding-top: 15px;
 }
 
 footer.responsive-div p:hover::after {
@@ -364,57 +361,11 @@ footer.responsive-div p:hover::after {
 
       place-items: center;
   }
-
-  /* contacts: icons and text */
-
-  #contacts-sources li a {
-      padding: 15px 0;
-  }
-
-  #contacts-sources li:first-child a span {
-      margin-left: 5px;
-  }
-
-  #contacts-sources li:nth-child(3) a {
-      margin-left: 15px;
-  }
-
-  #contacts-sources li:nth-child(4) a {
-      margin-left: 19px;
-  }
-
-  #contacts-sources li:nth-child(5) a {
-      margin-left: 10px;
-  }
-
-  #contacts-sources li:last-child a span {
-      margin-left: 3px;
-  }
-  
-  /* footer */
-
-  footer p {
-      border: 2px solid black;
-      border-radius: 3px;
-
-      padding: 10px;
-  }
-
-  footer p::after {
-      position: absolute;
-
-      min-width: 80vw;
-      margin-left: -45%;
-  }
-  
-  /* navbar */
-
-
 }
 
 @media (max-width: 465px) {
   #bodyDiv__navbar {
-      height: 15vh;
+      height: 10vh;
       min-height: 80px;
 
       flex-direction: column;
@@ -424,15 +375,5 @@ footer.responsive-div p:hover::after {
 
   #switch {
       margin-left: 5px;
-  }
-}
-
-@media (max-width: 335px) {
-  footer p {
-      border: none;
-  }
-
-  footer p:hover::after {
-      display: none;
   }
 }

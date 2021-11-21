@@ -26,3 +26,21 @@
     max-width: 85px;
     width: auto;
 }
+
+@media (max-width: 500px) {
+    .smallCard {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+
+        width: 100vw;
+    }
+    .smallCard > img {
+        max-width: 90%;
+        width: auto;
+    }
+    .smallCard > div p {
+        font-size: 2.5rem;
+    }
+}
